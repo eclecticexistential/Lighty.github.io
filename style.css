@@ -1,3 +1,9 @@
+/* navigation */
+
+body{
+	background: lavender;
+}
+
 .navbar{
 	background:#000;
 	font-size: calc(0.5em+0.5vw);
@@ -19,12 +25,14 @@
 	color: yellow;
 }
 
+/* book area */
+
 .book{
 	display:flex;
-	padding:0 3.35em;
 	flex-direction:row;
 	justify-content:space-around;
 	position:relative;
+	background: lavender;
 }
 
 .book img{
@@ -32,33 +40,81 @@
 	height:29em;
 }
 
-.book .leftPage{
+/* pages */
+
+
+.leftPage,
+.rightPage{
+	width: 22em;
+	height: 29em;
+	background: #FFF;
+	box-shadow: 0.125em 0.125em 0.125em 0.125em rgba(0,0,0,0.5);
+}
+
+.leftPage{
+	margin:1em;
+	padding:5em;
+}
+
+/* nav buttons */
+
+.book .titlePage{
 	box-shadow: 0.125em 0.125em 0.125em 0.125em rgba(0,0,0,0.5);
 	margin:2em;
 	padding:2em;
-	
+	background:#FFF;
 }
 
-#toLeft{
+
+#titleButton{
 	height:2.5em;
 	width:2.5em;
+}
+
+#leftButton,
+#rightButton{
+	height:1.5em;
+	width:1.5em;
+}
+
+#leftButton,
+#rightButton,
+#titleButton{
 	border:1px solid grey;
 	font-size: 2.5em;
 	position: absolute;
-	margin: 6em 0 0 10em;
 	border-radius: 5%;
-	background:purple;
-	color:yellow;
+	background: purple;
+	color: yellow;
 	cursor: pointer;
-	z-index:2;
 }
 
+#leftButton{
+	margin: 12.8em 3em 0 0;
+}
 
+#rightButton{
+	margin: 12.8em 0 0 3em;
+}
+
+#titleButton{
+	margin: 6em 0 0 7em;
+}
+
+/* slider */
+#slider{
+	position:absolute;
+	right:0;
+	padding: 4em 1.25em;
+	margin: 13em 0 0;
+}
+
+/*footer area*/
 
 footer{
 	text-align: center;
 	padding: 1.25em 0 0.25em;
-	background: #444;
+	background: #000;
 	color:white;
 	position: relative;
 	margin: auto;
@@ -67,6 +123,8 @@ footer{
 	left:0;
 	width:100vw;
 }
+
+/*responsive design*/
 
 @media (min-width: 37.5em){
 	.nav{
