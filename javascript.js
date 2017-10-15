@@ -10,6 +10,7 @@ var $coverImage =$('<img src="img/LightyCover-FirstDraft.png"/>');
 var $book=$(".book");
 var $leftPage=$("<div id='leftPage'></div>");
 var $rightPage=$(".rightPage");
+var $assets = $("<img src='img/BreadAsset.png'/>","<img src='CarrotAsset.png'/>","<img src='ChocolateAsset.png'/>","<img src='GrapesAsset.png'/>","<img src='IcecreamAsset.png'/>","<img src='LollipopAsset.png'/>","<img src='PizzaAsset.png'/>");
 
 $book.append($titleButton);
 $titlePage.append($coverImage);
@@ -24,7 +25,6 @@ $titleButton.on("click",nextPage);
 
 function nextPage(){
 	$titleButton.hide();
-<<<<<<< HEAD
 	$coverImage.hide();
 	$titlePage.css('width','22em').css('height','29em').css('margin-left',"26.5em").css('margin-right',"0");
 	appendButtons();
@@ -44,5 +44,12 @@ function appendSlider(){
 $slider.on("click",grow);
 
 function grow(){
-	$slider.toggle("slide");
+	var $slider_width=$slider.width();
+	if($slider_width<24){
+	$slider.css('width','30em');
+	$slider.append($assets);
+	}
+	if($slider_width>24){
+		$slider.css('width','3em');
+	}
 }
