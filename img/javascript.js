@@ -1,9 +1,7 @@
-
 var $leftButton=$("#leftButton");
 var $rightButton=$("#rightButton");
 var $titleButton= $('<input type="button" id="titleButton" value=">">');
 var $navButtons=$('.navbuttons');
-
 var $slider= $('<input type="button" id="slider">');
 var $titlePage=$('.titlePage');
 var $coverImage =$('<img src="img/LightyCover-FirstDraft.png"/>');
@@ -24,7 +22,6 @@ $titleButton.on("click",nextPage);
 
 function nextPage(){
 	$titleButton.hide();
-<<<<<<< HEAD
 	$coverImage.hide();
 	$titlePage.css('width','22em').css('height','29em').css('margin-left',"26.5em").css('margin-right',"0");
 	appendButtons();
